@@ -1,0 +1,14 @@
+{
+   "appDesc": {
+      "description": "Adds custom buttons to a Google Calendar Event Detail",
+      "message": "The buttons are customizable. The labels and destination urls are input."
+   },
+   "appName": {
+      "description": "GCal_EventButton",
+      "message": "Event Button for GCal Event"
+   },
+   "extension_name": {
+      "description": "JetSmarter - GCal Event",
+      "message": "Google Calendar Button (by JetSmarter)"
+   }
+}
