@@ -1,0 +1,36 @@
+{
+    "background": {
+      "persistent": false,
+       "scripts": [ "lib/jstz-1.0.4.min.js", "lib/jquery.min.js", "lib/moment+langs.min.js"]
+    },
+    "browser_action": {
+      "default_icon": {
+         "19": "images/popup/icon_unavailable-19.png",
+         "38": "images/popup/icon_unavailable-38.png"
+       },
+       "default_popup": "browser_action.html",
+       "default_title": "__MSG_extension_name__"
+    },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "gcal.css" ],
+      "js": [ "gcal.js" ],
+      "matches": [ "https://*.calendar.google.com/calendar/render#*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA36TNFosQ+sk2iqd8rcP7XAPnnua2z5RvyyKyxw4546xY3rNpAYtZMjY6GYAmty420+TyXaFVOOPOopPXiCu56HCRYKvotAapcE1CHATQq3M8mcDpueTwfvF1ol7QLqmE9fSv5UTkJ1gD/0EpW6Bn6uuWwfP4xzk79aLekoKD3zETdLwWIToJ1aRHPG+1ZxYySkbJWBFY2HYGO7wtZu1mTisF2WshUTmQfqV9QFRIoLixkZEPB4NdmmZDxrTNfooSns06vM9Gr6s9fnHTLNJ9AC9AE/pgaLLDv8XPlyP7gm/ne+SkKBaibkHs8OxmCcKw5WjNzRCaLwkdcwCTVDR2VQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.01",
+   "web_accessible_resources": [ "gcal.css", "/images/about.png", "/images/enablebutton.png", "google_analytics.js", "http://fonts.googleapis.com/" ]
+}
